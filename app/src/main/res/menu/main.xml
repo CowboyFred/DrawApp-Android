@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/filters"
+        android:title="Filters">
+        <menu>
+            <item
+                android:id="@+id/normal"
+                android:title="Normal"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/emboss"
+                android:title="Emboss"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/blur"
+                android:title="Blur"
+                app:showAsAction="never" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/undo"
+        app:showAsAction="never"
+        android:title="Undo"/>
+
+    <item
+        android:id="@+id/redo"
+        app:showAsAction="never"
+        android:title="Redo"/>
+
+    <item
+        android:id="@+id/swag"
+        android:checkable="true"
+        android:title="SWAG mode" />
+    <item
+        android:id="@+id/clear"
+        app:showAsAction="never"
+        android:title="Clear"/>
+</menu>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.peka.asgmtpaint.MainActivity">
+
+    <com.example.peka.asgmtpaint.PaintView
+        android:id="@+id/PaintView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnColor"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="36dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSize" />
+
+    <ImageButton
+        android:id="@+id/btnSize"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="Change brush size"
+        android:src="@drawable/size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTools" />
+
+    <ImageButton
+        android:id="@+id/btnRect"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="Draw rectangles"
+        android:src="@drawable/rect"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnTools"
+        app:layout_constraintEnd_toStartOf="@+id/btnBrush" />
+
+    <ImageButton
+        android:id="@+id/btnBrush"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Draw with a brush"
+        android:src="@drawable/brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnTools"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnOval"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="Draw ovals"
+        android:src="@drawable/oval"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnTools"
+        app:layout_constraintStart_toEndOf="@+id/btnBrush" />
+
+    <ImageButton
+        android:id="@+id/btnTools"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Change tool"
+        android:src="@drawable/brush"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnUndo"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="Undo"
+        android:src="@drawable/undo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnEraser" />
+
+    <SeekBar
+        android:id="@+id/barSize"
+        android:layout_width="fill_parent"
+        android:layout_height="22dp"
+        android:layout_marginBottom="20dp"
+        android:max="90"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnTools"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/barSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnEraser"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="Erase your drawings"
+        android:src="@drawable/eraser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnTools" />
+
+    <ImageButton
+        android:id="@+id/btnDot"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Draw dots"
+        android:src="@drawable/dot"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnBrush"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
